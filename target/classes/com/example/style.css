@@ -1,0 +1,14 @@
+.text{
+    -fx-font-family: "JetBrains Mono";
+}
+.button:hover{
+    -fx-background-color: #340F6C;
+}
+.button:pressed{
+    -fx-background-color: #6587a6;
+}
+.button{
+    -fx-background-color: #6667a6;
+}
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.registroUsuarioController">
+   <children>
+      <TextField fx:id="TEXTFIELD_USERNAME" layoutX="95.0" layoutY="305.0" prefHeight="25.0" prefWidth="286.0" promptText="Username" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6667a6" height="139.0" layoutX="190.0" layoutY="588.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="268.0" />
+      <Circle fill="#f4f4f4" layoutX="361.0" layoutY="570.0" radius="143.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#6667a6" layoutX="43.0" layoutY="635.0" radius="182.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#6667a6" layoutX="417.0" layoutY="61.0" radius="182.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6667a6" height="139.0" layoutX="-11.0" layoutY="-55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="268.0" />
+      <Circle fill="#f4f4f4" layoutX="91.0" layoutY="104.0" radius="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="43.0" layoutY="149.0" text="Crear Cuenta">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TEXTFIELD_NAME" layoutX="94.0" layoutY="218.0" prefHeight="25.0" prefWidth="286.0" promptText="Nombre" style="-fx-background-color: 6587a6;" />
+      <Button layoutX="197.0" layoutY="536.0" mnemonicParsing="false" onAction="#BOTON_CREAR_CUENTA" text="Crear cuenta" />
+      <CheckBox fx:id="CHECKBOX_TC" layoutX="92.0" layoutY="439.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Está de acuerdo con los términos y condiciones" />
+      <TextField fx:id="TEXTFIELD_APELLIDO" layoutX="95.0" layoutY="263.0" prefHeight="25.0" prefWidth="286.0" promptText="Apellidos" />
+      <PasswordField fx:id="TEXTFIELD_CONTRASEÑA1" layoutX="96.0" layoutY="349.0" prefHeight="25.0" prefWidth="286.0" promptText="Contraseña" />
+      <CheckBox layoutX="-356.0" layoutY="-8.0" mnemonicParsing="false" text="CheckBox" />
+      <PasswordField fx:id="TEXTFIELD_CONTRASEÑA2" layoutX="96.0" layoutY="389.0" prefHeight="25.0" prefWidth="286.0" promptText="Confirmar contraseña" />
+   </children>
+</AnchorPane>
