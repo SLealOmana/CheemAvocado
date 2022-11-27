@@ -1,3 +1,8 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
+    "java.project.referencedLibraries": [
+     "demo/target/generated-sources/annotations/jtransc-rt-0.5.0-ALPHA4.jar",
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
