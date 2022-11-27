@@ -38,7 +38,7 @@ public class inicioSesionController {
                     errorAlert.setContentText("La informacion de inicio de sesion es invalida.");
                     errorAlert.showAndWait();
                 }else{
-                    App.setRoot("Armario");       
+                    App.setRoot("Inicio");       
                 }
             }
             else{            

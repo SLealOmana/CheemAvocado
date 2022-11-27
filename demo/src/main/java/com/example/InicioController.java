@@ -14,11 +14,6 @@ public class InicioController {
     List<Publicacion> publicaciones = new ArrayList<>();
     int cont =0;
 
-    public InicioController(List <Publicacion> publiEntrada){
-        publicaciones= new ArrayList<Publicacion>(publiEntrada);
-
-    }
-
     @FXML
     private Button botonAnterior;
 
@@ -47,27 +42,27 @@ public class InicioController {
     private Label usuario;
 
     @FXML
-    void ir_Armario(ActionEvent event) {
-
+    void ir_Armario(ActionEvent event) throws IOException{
+        App.setRoot("Armario");
     }
 
     @FXML
-    void ir_Inicio(ActionEvent event) {
-
+    void ir_Tienda(ActionEvent event) throws IOException{
+        App.setRoot("Tienda");
     }
 
     @FXML
-    void ir_Perfil(ActionEvent event) {
-
+    void ir_Inicio(ActionEvent event) throws IOException{
+        App.setRoot("Inicio");
     }
 
     @FXML
-    void ir_Tienda(ActionEvent event) {
-
+    void ir_Perfil(ActionEvent event) throws IOException{
+        App.setRoot("Perfil");
     }
 
     void botonSiguiente (ActionEvent event) throws IOException {
-        if (cont< publicaciones.size()-1){
+        if (cont < publicaciones.size()-1){
             cont++;
             actualizar(cont);
         }

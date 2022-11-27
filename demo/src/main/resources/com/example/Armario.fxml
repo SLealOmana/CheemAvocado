@@ -27,17 +27,19 @@
          <children>
             <HBox alignment="CENTER_LEFT" layoutX="-8.0" layoutY="-8.0" prefHeight="82.0" prefWidth="450.0" spacing="10.0" stylesheets="@style.css">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
-                     <children>
-                        <ImageView fitHeight="178.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@img/Cheem%20Style.png" />
-                           </image>
-                        </ImageView>
-                     </children></HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                   <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
                      <children>
-                        <Button mnemonicParsing="false" style="-fx-background-radius: 100;">
+                        <Button fx:id="button_add" mnemonicParsing="false" onAction="#add_prenda" style="-fx-background-radius: 100;">
+                           <graphic>
+                              <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="button_search" mnemonicParsing="false" style="-fx-background-radius: 100;">
                            <graphic>
                               <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -116,5 +118,10 @@
             <Insets top="8.0" />
          </padding>
       </HBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Cheem%20Style.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

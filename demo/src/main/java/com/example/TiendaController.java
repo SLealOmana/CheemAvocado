@@ -15,12 +15,6 @@ public class TiendaController {
     List<Producto> productos = new ArrayList<>();
     int cont=-1;
 
-    //Atualizo con los primeros 4 productos
-    public TiendaController(List <Producto> productosEntry){
-        productos= new ArrayList<Producto>(productosEntry);
-        actualizarPantalla(cont, true);
-    }
-
     @FXML
     void  boton_anterior(ActionEvent event) throws IOException{
         actualizarPantalla(cont,false);
@@ -57,23 +51,23 @@ public class TiendaController {
     @FXML
     private Label p2_descripcion;
     @FXML
-    void ir_Armario(ActionEvent event) {
-
+    void ir_Armario(ActionEvent event) throws IOException{
+        App.setRoot("Armario");
     }
 
     @FXML
-    void ir_Inicio(ActionEvent event) {
-
+    void ir_Tienda(ActionEvent event) throws IOException{
+        App.setRoot("Tienda");
     }
 
     @FXML
-    void ir_Perfil(ActionEvent event) {
-
+    void ir_Inicio(ActionEvent event) throws IOException{
+        App.setRoot("Inicio");
     }
 
     @FXML
-    void ir_Tienda(ActionEvent event) {
-
+    void ir_Perfil(ActionEvent event) throws IOException{
+        App.setRoot("Perfil");
     }
 
     @FXML
