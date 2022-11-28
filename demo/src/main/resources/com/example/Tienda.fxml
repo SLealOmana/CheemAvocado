@@ -23,7 +23,7 @@
       </Text>
       <VBox layoutY="82.0" prefHeight="600.0" prefWidth="450.0">
          <children>
-            <HBox prefHeight="150.0" prefWidth="200.0">
+            <HBox prefHeight="123.0" prefWidth="450.0">
                <children>
                   <VBox prefHeight="150.0" prefWidth="143.0">
                      <children>
@@ -134,37 +134,6 @@
                               <Label fx:id="p3_precio" text="Precio">
                                  <font>
                                     <Font size="13.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <VBox prefHeight="150.0" prefWidth="143.0">
-                     <children>
-                        <ImageView fx:id="p4_imagen" fitHeight="150.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="150.0" prefWidth="665.0">
-                     <children>
-                        <HBox prefHeight="30.0" prefWidth="305.0">
-                           <children>
-                              <Label fx:id="p4_name" text="Producto">
-                                 <font>
-                                    <Font name="Gill Sans Ultra Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="117.0" prefWidth="305.0">
-                           <children>
-                              <Label fx:id="p4_descripcion" text="Descripción">
-                                 <font>
-                                    <Font name="Gill Sans MT" size="13.0" />
                                  </font>
                               </Label>
                            </children>

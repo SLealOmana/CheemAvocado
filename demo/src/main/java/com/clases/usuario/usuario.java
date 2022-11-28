@@ -1,16 +1,10 @@
 package com.clases.usuario;
 
-import java.io.IOException;
-import java.io.Serializable;
-import com.clases.paySystem.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonToken;
-import com.google.gson.stream.JsonWriter;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+@ToString
 @Getter
 @Setter
 @NoArgsConstructor

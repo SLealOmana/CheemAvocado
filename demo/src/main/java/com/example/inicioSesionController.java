@@ -25,7 +25,6 @@ public class inicioSesionController {
         if(!TEXTFIELD_USUARIO.getText().isEmpty() && !PASSWORDFIELD_CONTRASEÑA.getText().isEmpty())
         {   
             String user = TEXTFIELD_USUARIO.getText();
-            System.out.println(user);
             String pass = PASSWORDFIELD_CONTRASEÑA.getText();
             
             int state = model.login(user, pass);

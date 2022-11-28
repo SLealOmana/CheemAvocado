@@ -4,8 +4,11 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.List;
+
 import javax.imageio.ImageIO;
-import com.google.gson.Gson;
+
+import com.clases.prendas.prenda;
 import java.awt.image.BufferedImage;
 import javafx.scene.image.Image;
 import javafx.event.ActionEvent;
@@ -40,12 +43,27 @@ public class ArmarioController
     private Button button_add;
     @FXML
     private Button button_search;
-    void actualizarPantalla (int cont){
-        Gson gson = new Gson();
+    void actualizarPantalla (int cont) throws IOException{
+        model modelo = model.getSingleton();
+        int indexed= modelo.getPindex();
+        List<prenda> p = modelo.getPrendas();
+        if(indexed+cont<0)
+            model.editPindex(p.size()-1);
+        else if (indexed+cont>p.size()-1)
+            model.editPindex(0);
+        else
+            model.editPindex(modelo.getPindex()+cont);
+        ByteArrayInputStream inStreambj = new ByteArrayInputStream(p.get(modelo.getPindex()).getPhoto());
+        BufferedImage newImage = ImageIO.read(inStreambj);
+        ImageIO.write(newImage, "jpg", new File("demo\\src\\main\\resources\\com\\example\\tmp\\outputImage.jpg"));
+        File fl = new File("demo\\src\\main\\resources\\com\\example\\tmp\\outputImage.jpg");
+        Image im = new Image(fl.toURI().toString());
+        display.setImage(im);
 
     }
 @FXML
     void add_prenda(ActionEvent event) throws IOException{
+        model modelo = model.getSingleton();
         FileChooser fil_chooser = new FileChooser();
         FileChooser.ExtensionFilter extFilter = 
                         new FileChooser.ExtensionFilter("Img files (*.png,, *.jpg...)", "*.png", "*.jpg", "*.jpeg");
@@ -54,12 +72,9 @@ public class ArmarioController
                 if (file != null) {
                     System.out.println(file.getAbsolutePath()+ "  selected");
                     byte[] fileContent = Files.readAllBytes(file.toPath());
-                    ByteArrayInputStream inStreambj = new ByteArrayInputStream(fileContent);
-                    BufferedImage newImage = ImageIO.read(inStreambj);
-                    ImageIO.write(newImage, "jpg", new File("demo\\src\\main\\resources\\com\\example\\tmp\\outputImage.jpg"));
-                    File fl = new File("demo\\src\\main\\resources\\com\\example\\tmp\\outputImage.jpg");
-                    Image im = new Image(fl.toURI().toString());
-                    display.setImage(im);;
+                    prenda p = new prenda("", modelo.getUsuario().getUser(), file.getName(), fileContent);
+                    modelo.getPrendas().add(p);
+                    modelo.savePrendas();
                 }
         
 

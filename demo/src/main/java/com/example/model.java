@@ -1,11 +1,22 @@
 package com.example;
-import java.io.*;
-import java.util.Optional;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.clases.loggerSystem.*;
-import com.clases.usuario.usuario;;
+import com.clases.prendas.prenda;
+import com.clases.usuario.usuario;
+
+import lombok.Getter;
+import lombok.Setter;
+@Setter
+@Getter
 public class model {
-    static private model singleton = null;
+    private static model singleton = null;
+    private static usuario userActive = null;
+    private static List<prenda> prendas =null;
+    private static int pIndex=0;
+
     private model() { }
     static public model getSingleton() {
 
@@ -17,17 +28,43 @@ public class model {
     public String metodo() {
         return "Singleton instanciado bajo demanda";
     }
-    private static usuario userActive = null;
+    public int getPindex(){
+        return pIndex;
+    }
+    public static int editPindex(int cant){
+        pIndex=cant;
+        return cant;
+    }
+    public usuario getUsuario(){
+        return userActive;
+    }
+    public List<prenda> getPrendas(){
+        if(prendas==null)
+            prendas= new ArrayList<prenda>();
+        return prendas;
+    }
     public static void setUsuario(usuario user){
        userActive=user;
     }
+    public static void loadPrendas()
+    {
+        logger logger = new logPrendasIn();
+        prendas=((logPrendasIn)logger).load(userActive.getUser());;
+    }
+    public void savePrendas()
+    {
+        logger logger = new logPrendasOut();
+        ((logPrendasOut)logger).save(prendas);;
+    }
+
     public static int login(String user,String pass)
     {
         System.out.println(user);
-        Optional<usuario> u= cargar(user, pass);
+        usuario u= cargar(user, pass);
         if(u!=null)
             {
-                setUsuario(u.get());
+                setUsuario(u);
+                loadPrendas();
                 return 0;
             }
         return 1;
@@ -37,7 +74,7 @@ public class model {
         logger logger = new logOut();
         ((logOut)logger).save(user);
     }
-    public static Optional<usuario> cargar (String user,String pass)
+    public static usuario cargar (String user,String pass)
     {
         logger logger = new logIn();
         return ((logIn)logger).load(user, pass);
@@ -48,6 +85,8 @@ public class model {
         setUsuario(u);
         guardar(u);
     }
+    
+    
     public static void printInfo()
     {
         System.out.println(userActive.getNombre());

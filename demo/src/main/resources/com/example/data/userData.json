@@ -1,7 +1,25 @@
-{
+[{
   "user": "a",
   "pass": "a",
   "nombre": "a",
   "apellido": "a",
   "PayMethod": "PayByCash"
-}
+},{
+  "user": "c",
+  "pass": "c",
+  "nombre": "c",
+  "apellido": "c",
+  "PayMethod": "PayByCash"
+},{
+  "user": "u",
+  "pass": "u",
+  "nombre": "u",
+  "apellido": "u",
+  "PayMethod": "PayByCash"
+},{
+  "user": "rrr",
+  "pass": "rrr",
+  "nombre": "rtr",
+  "apellido": "trt",
+  "PayMethod": "PayByCash"
+}]
