@@ -2,8 +2,8 @@ package com.example;
 import java.io.*;
 import java.util.Optional;
 
-import com.clases.usuario;
-import com.clases.loggerSystem.*;;
+import com.clases.loggerSystem.*;
+import com.clases.usuario.usuario;;
 public class model {
     static private model singleton = null;
     private model() { }
