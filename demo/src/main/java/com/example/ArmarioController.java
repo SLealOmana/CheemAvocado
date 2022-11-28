@@ -5,9 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import javax.imageio.ImageIO;
-
 import com.google.gson.Gson;
-
 import java.awt.image.BufferedImage;
 import javafx.scene.image.Image;
 import javafx.event.ActionEvent;
@@ -44,14 +42,6 @@ public class ArmarioController
     private Button button_search;
     void actualizarPantalla (int cont){
         Gson gson = new Gson();
-/* 
-            if (cont+1<productos.size()){
-                cont++;
-                p1_imagen.setImage(productos.get(cont).getImagenProducto());
-                p1_name.setText(productos.get(cont).getNombreProducto());
-                p1_descripcion.setText(productos.get(cont).getDescripcionProducto());
-                p1_precio.setText((String.valueOf(productos.get(cont).getPrecioProducto())));
-            }*/
 
     }
 @FXML

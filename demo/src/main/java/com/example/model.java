@@ -1,7 +1,7 @@
 package com.example;
 import java.io.*;
 import com.clases.usuario;
-
+import com.clases.loggerSystem.*;;
 public class model {
     static private model singleton = null;
     private model() { }
@@ -32,13 +32,7 @@ public class model {
     }
     public static void guardar(usuario user)
     {
-        try{
-        FileOutputStream fout=new FileOutputStream("data.txt",true);    
-        ObjectOutputStream out=new ObjectOutputStream(fout);    
-        out.writeObject(user); 
-        out.flush();     
-        out.close();    
-        }catch(Exception e){System.out.println(e);}  
+        logger logOut = new logOut();
     }
     public static usuario cargar (String user,String pass)
     {

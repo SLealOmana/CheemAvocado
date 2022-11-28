@@ -1,12 +1,21 @@
 package com.clases;
 
 import java.io.Serializable;
+import com.clases.paySystem.*;
 
+import lombok.Getter;
+import lombok.Setter;
+@Getter
+@Setter
 public class usuario implements Serializable {
+
     private String user;
     private String pass;
     private String nombre;
     private String apellido;
+    private CreditCard creditCard;
+    private String PayMethod;
+    
     public usuario(String user,String pass,String nombre,String apellido)
     {
         this.user=user;
@@ -14,34 +23,6 @@ public class usuario implements Serializable {
         this.nombre=nombre;
         this.apellido=apellido;
     }
-    public String getUser()
-    {
-        return user;
-    }
-    public String getPass()
-    {
-        return pass;
-    }
-    public String getNombre()
-    {
-        return nombre;
-    }
-    public String getApellido()
-    {
-        return apellido;
-    }
-    public void setUser(String user){
-        this.user=user;
-    }
-    public void setPass(String pass){
-        this.pass=pass;
-    }
-    public void setNombre(String nombre){
-        this.nombre=nombre;
-    }
-    public void setApellido(String apellido)
-    {
-        this.apellido=apellido;
-    }
+    
     
 }
