@@ -19,7 +19,6 @@ public class Publicacion {
         return descripcion;
     }
     String usuario;
-
     Image imagenPublicacion;
     String descripcion;
 
