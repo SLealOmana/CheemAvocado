@@ -49,7 +49,8 @@ public class model {
     public static void loadPrendas()
     {
         logger logger = new logPrendasIn();
-        prendas=((logPrendasIn)logger).load(userActive.getUser());;
+        System.out.println(userActive.getUser());
+        prendas = ((logPrendasIn)logger).load(userActive.getUser());;
     }
     public void savePrendas()
     {

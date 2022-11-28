@@ -22,4 +22,10 @@
   "nombre": "rtr",
   "apellido": "trt",
   "PayMethod": "PayByCash"
+},{
+  "user": "lealsa",
+  "pass": "12",
+  "nombre": "santiago",
+  "apellido": "leal",
+  "PayMethod": "PayByCash"
 }]

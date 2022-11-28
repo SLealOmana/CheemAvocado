@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interfaces.InicioController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6667a6" height="82.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+
+      <Button fx:id="botonAnterior" layoutX="28.0" layoutY="551.0" mnemonicParsing="false" stylesheets="@style.css" text="Anterior" textFill="WHITE" />
+      <Button fx:id="botonSiguiente" layoutX="359.0" layoutY="551.0" mnemonicParsing="false" stylesheets="@style.css" text="Siguiente" textFill="#fffbfb" />
+      <ImageView fx:id="imagenPublicacion" fitHeight="189.0" fitWidth="333.0" layoutX="58.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="usuario" layoutX="52.0" layoutY="123.0" text="Usuario">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="descripcion" layoutX="59.0" layoutY="409.0" prefHeight="112.0" prefWidth="333.0" text="Descripción" />
+      <HBox alignment="TOP_CENTER" layoutY="620.0" prefHeight="60.0" prefWidth="450.0" spacing="50.0" style="-fx-background-color: #6667a6;" stylesheets="@style.css">
+         <children>
+            <Button fx:id="button_inicio" mnemonicParsing="false" onAction="#ir_Inicio" style="-fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/IconHome.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="button_armario" mnemonicParsing="false" onAction="#ir_Armario" style="-fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/IconArmario.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="button_tienda" mnemonicParsing="false" onAction="#ir_Tienda" prefHeight="46.0" prefWidth="54.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/TiendaLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="button_perfil" mnemonicParsing="false" onAction="#ir_Perfil" prefHeight="46.0" prefWidth="54.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/IconUser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="8.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="82.0" prefWidth="450.0" spacing="10.0" stylesheets="@style.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="165.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" HBox.hgrow="ALWAYS" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Cheem%20Style.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

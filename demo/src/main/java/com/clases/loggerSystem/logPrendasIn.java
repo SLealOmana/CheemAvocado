@@ -26,6 +26,9 @@ public class logPrendasIn implements logger{
             File fl = new File(path);
             Reader reader = Files.newBufferedReader(Paths.get(fl.toURI()));
             List<prenda> users = tempFile.fromJson(reader, type);
+            for (prenda prenda2 : users) {
+                System.out.println(users.size()+" DUENO PRENDA: "+prenda2.getOwner()+" Prenda: "+prenda2.getDescripcion());
+            }
             try {
                 return users.stream().filter(prenda ->prenda.getOwner().equalsIgnoreCase(owner)).collect(Collectors.toList());
             }

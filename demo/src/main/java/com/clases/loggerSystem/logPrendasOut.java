@@ -29,15 +29,13 @@ public class logPrendasOut implements logger{
             List<prenda> users = tempFile.fromJson(reader, type);
             if(users!=null)
                 {
-                for (prenda prenda : u) {
-                    users.add(prenda);
-                } 
+                users.add(u.get(u.size()-1));
                 GsonBuilder builder2 = new GsonBuilder();
                 builder2.registerTypeAdapter(prenda.class, new prendaAdapter());
                 builder2.setPrettyPrinting();
                 Gson tempFile2 = builder2.create();
                 Writer writer = Files.newBufferedWriter(Paths.get(path));
-                //writer.write("[");
+                writer.write("[");
                 int size = 0;
                 for (prenda prenda : users) {
                     tempFile2.toJson(prenda, writer);
@@ -45,7 +43,7 @@ public class logPrendasOut implements logger{
                     if(size<users.size())
                         writer.write(",");
                 }
-                //writer.write("]");
+                writer.write("]");
                 writer.close();
             }
             else

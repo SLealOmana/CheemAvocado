@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="680.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interfaces.TiendaController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6667a6" height="80.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+      <Text fill="WHITE" layoutX="181.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tienda" textAlignment="CENTER">
+         <font>
+            <Font name="Heiti TC Light" size="30.0" />
+         </font>
+      </Text>
+      <VBox layoutY="82.0" prefHeight="600.0" prefWidth="450.0">
+         <children>
+            <HBox prefHeight="123.0" prefWidth="450.0">
+               <children>
+                  <VBox prefHeight="150.0" prefWidth="143.0">
+                     <children>
+                        <ImageView fx:id="p1_imagen" fitHeight="150.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="150.0" prefWidth="665.0">
+                     <children>
+                        <HBox prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p1_name" text="Producto">
+                                 <font>
+                                    <Font name="Gill Sans Ultra Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="117.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p1_descripcion" text="Descripción">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="117.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p1_precio" text="Precio">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="150.0" prefWidth="143.0">
+                     <children>
+                        <ImageView fx:id="p2_imagen" fitHeight="150.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="150.0" prefWidth="665.0">
+                     <children>
+                        <HBox prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p2_name" text="Producto">
+                                 <font>
+                                    <Font name="Gill Sans Ultra Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="117.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p2_descripcion" text="Descripción">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="117.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p2_precio" text="Precio">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="150.0" prefWidth="143.0">
+                     <children>
+                        <ImageView fx:id="p3_imagen" fitHeight="150.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="150.0" prefWidth="665.0">
+                     <children>
+                        <HBox prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p3_name" text="Producto">
+                                 <font>
+                                    <Font name="Gill Sans Ultra Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="117.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p3_descripcion" text="Descripción">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="117.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="p3_precio" text="Precio">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="boton_anterior" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" style="-fx-border-color: white;" stylesheets="@style.css" text="Anterior" textFill="WHITE" />
+      <Button fx:id="boton_siguiente" layoutX="370.0" layoutY="16.0" mnemonicParsing="false" style="-fx-border-color: white;" stylesheets="@style.css" text="Siguiente" textFill="WHITE" />
+      <HBox alignment="TOP_CENTER" layoutY="640.0" prefHeight="60.0" prefWidth="450.0" spacing="50.0" style="-fx-background-color: #6667a6;" stylesheets="@style.css">
+         <children>
+            <Button fx:id="button_Inicio" mnemonicParsing="false" onAction="#ir_Inicio" style="-fx-border-color: 6667a66667a6; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/IconHome.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="button_Armario" mnemonicParsing="false" onAction="#ir_Armario" style="-fx-border-color: 6667a66667a6; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/IconArmario.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="button_Tienda" mnemonicParsing="false" onAction="#ir_Tienda" prefHeight="46.0" prefWidth="54.0" style="-fx-border-radius: 20; -fx-border-color: 6667a66667a6; -fx-background-radius: 20;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/TiendaLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="button_Perfil" mnemonicParsing="false" onAction="#ir_Perfil" prefHeight="46.0" prefWidth="54.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: 6667a66667a6;" stylesheets="@style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/IconUser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="8.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

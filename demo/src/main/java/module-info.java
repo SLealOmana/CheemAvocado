@@ -7,4 +7,6 @@ module com.example {
     
     opens com.example to javafx.fxml;
     exports com.example;
+    opens com.example.interfaces to javafx.fxml;
+    exports com.example.interfaces;
 }
