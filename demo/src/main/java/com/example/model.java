@@ -1,5 +1,7 @@
 package com.example;
 import java.io.*;
+import java.util.Optional;
+
 import com.clases.usuario;
 import com.clases.loggerSystem.*;;
 public class model {
@@ -19,41 +21,26 @@ public class model {
     public static void setUsuario(usuario user){
        userActive=user;
     }
-    public static int login      (String user,String pass)
+    public static int login(String user,String pass)
     {
         System.out.println(user);
-        usuario u= cargar(user, pass);
+        Optional<usuario> u= cargar(user, pass);
         if(u!=null)
             {
-                setUsuario(u);
+                setUsuario(u.get());
                 return 0;
             }
         return 1;
     }
     public static void guardar(usuario user)
     {
-        logger logOut = new logOut();
+        logger logger = new logOut();
+        ((logOut)logger).save(user);
     }
-    public static usuario cargar (String user,String pass)
+    public static Optional<usuario> cargar (String user,String pass)
     {
-        try{
-            ObjectInputStream in=new ObjectInputStream(new FileInputStream("data.txt"));  
-            try{
-                usuario s = (usuario)in.readObject();
-                while(s != null) {
-                  
-                    if(s.getUser().equals(user)&&s.getPass().equals(pass)){
-                        in.close();
-                        return s;}
-                    else
-                    s = (usuario)in.readObject();  
-                }
-            
-            }catch(EOFException e){System.out.println(e);}
-            return null;
-        }catch(Exception e){System.out.println(e);
-        e.printStackTrace();}  
-        return null;
+        logger logger = new logIn();
+        return ((logIn)logger).load(user, pass);
     }
     public static void crear(String user, String pass, String nombre, String apellido)
     {
