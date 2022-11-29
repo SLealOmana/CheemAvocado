@@ -1,8 +1,6 @@
 package com.clases;
 
 import javafx.scene.image.Image;
-import lombok.Getter;
-import lombok.Setter;
 
 public class Publicacion {
 

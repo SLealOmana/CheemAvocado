@@ -28,4 +28,10 @@
   "nombre": "santiago",
   "apellido": "leal",
   "PayMethod": "PayByCash"
+},{
+  "user": "lealPrueba",
+  "pass": "1234",
+  "nombre": "santiago",
+  "apellido": "leal",
+  "PayMethod": "PayByCash"
 }]
